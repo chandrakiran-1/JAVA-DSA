@@ -1,37 +1,36 @@
 import java.util.*;
-
-class HappyNum {
-
-    // Method to calculate sum of squares of digits
-    public static int SumOfSquares(int n) {
-        int sum = 0;
-        while (n > 0) {
-            int digit = n % 10;
-            sum = sum + digit * digit;
-            n = n / 10;
+class HappyNum
+{
+    public static int sumOfsquares(int n)
+    {
+        int sumof=0;
+        while(n>0)
+        {
+            int digit= n%10;
+            sumof= sumof+digit*digit;
+            n/=10;
         }
-        return sum;
-    }
-
-    public static void main(String[] args) {
-        Scanner y = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int n = y.nextInt();
-
-        int slow = n;
-        int fast = n;
-
-        // Loop to detect cycle
-        do {
-            slow = HappyNum.SumOfSquares(slow);                        // slow moves 1 step
-            fast = HappyNum.SumOfSquares(HappyNum.SumOfSquares(fast)); // fast moves 2 steps
-        } while (slow != fast);
-
-        // Check result
-        if (slow == 1) {
-            System.out.println("Happy Number");
-        } else {
-            System.out.println("Not a Happy Number");
-        }
+        return sumof;
     }
 }
+public static void main(String[] args)
+{
+    Scanner x= new Scanner (System.in);
+    System.out.println("enter a number :");
+     int n =x.nextInt();
+     int slowin=n;
+     int fastin=n;
+     do{
+         slowin= HappyNum.sumOfsquares(slowin);
+         fastin= HappyNum.sumOfsquares(HappyNum.sumOfsquares(fastin));
+     }while(slowin!=fastin);
+     if (slowin ==1)
+     {
+         System.out.println("happy NUm");
+
+     }
+     else
+     {
+         System.out.println("not a happy Num");
+     }
+    }
