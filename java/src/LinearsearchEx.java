@@ -1,34 +1,31 @@
 import java.util.*;
 class LinearsearchEx
 {
-    public static void main(String[] args)
+    public static void main(String[]args)
     {
         Scanner x = new Scanner(System.in);
-        System.out.println("Enter the Array Size : ");
-        int n = x.nextInt();
-        System.out.println("Enter the Array Elements : ");
-        int []arr= new int [n];
-        for(int i=0;i<arr.length;i++)
+        System.out.println("Enter the Array  Size ? : ");
+        int n= x.nextInt();
+        int []a= new int [n];
+        for(int i=0;i<a.length;i++)
         {
-            arr[i]=x.nextInt();
+            a[i]=x.nextInt();
         }
-        System.out.println("Enter the Element is to find ? ");
+        System.out.println("Enter the Array List of Items : ");
         int key= x.nextInt();
-        boolean find = false;
-        for (int i=0;i<arr.length;i++)
+        boolean found= false;
+        for(int i=0;i<a.length;i++)
         {
-            if (arr[i]==key)
+            if(key==a[i])
             {
-                System.out.println("Element is Found : "+ arr[i]);
-                find=true;
+                System.out.println("The Element is Found : " + a[i]);
+                found= true;
                 break;
-
             }
 
-        }
-        if (!find) {
-            System.out.println("not Found ");
-
-        }
+        } if(!found)
+    {
+        System.out.println(" Element was Not Found ");
+    }
     }
 }
