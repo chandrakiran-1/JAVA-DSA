@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 public class InputOutput {
     public static void main(String[]args) throws IOException
     {
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter something : ");
-        String s = br.readLine();
+        BufferedReader b= new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter something ? : ");
+        String s= b.readLine();
         System.out.println("you entered : " + s);
     }
 }
