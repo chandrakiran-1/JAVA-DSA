@@ -29,7 +29,7 @@ public class ArrayAppp {
         {
             if(arr[j]==searchKey)
             {
-                System.out.println("Elemet is Found : ");
+                System.out.println("Element is Found : ");
                 break;
             }
         }
