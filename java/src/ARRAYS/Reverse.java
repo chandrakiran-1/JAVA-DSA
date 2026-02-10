@@ -6,31 +6,26 @@ public class Reverse {
     public static void main(String[]args)
     {
         Scanner x = new Scanner(System.in);
-        System.out.println("Enter Array Size : ");
-        int size= x.nextInt();
+        System.out.println("Enter a Number : ");
+        int num=x.nextInt();
         int []arr;
-        arr= new int [size];
-        System.out.println("Enter the Array Elements : ");
+        arr= new int [num];
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=x.nextInt();
         }
         int start=0;
-        int end= arr.length-1;
+        int end=arr.length-1;
         while(start < end)
         {
-            int temp = arr[start];
-            arr[start]= arr[end];
+            int temp= arr[start];
+            arr[start]=arr[end];
             arr[end]=temp;
             start++;
             end--;
-
         }
         System.out.println("Reversed Array : ");
-        for(int i=0;i<arr.length;i++)
-        {
-            System.out.print(arr[i]+ " ");
-        }
-
+        for(int i=0; i<arr.length;i++)
+        System.out.print(arr[i] + " ");
     }
 }
